@@ -10,43 +10,22 @@ import bank from '../../img/bank.png';
 import contract from '../../img/contract.png';
 
 const LayoutMenu: React.FC = () => {
-    
+
+    const imagem = [cap, boss, school, book, video, bank, contract];
+    const titulo = ['Acadêmico', 'Agenda Gestor', 'AVA', 'Biblioteca', 'EAD', 'Financeiro', 'Secretaria'];
+
     return (
         <Container>
-            <div>
-                <img src={cap} alt=""/>
-                <a>Acadêmico</a>
-            </div>
-
-            <div>
-                <img src={boss} alt=""/>
-                <a>Agenda Gestor</a>
-            </div>
-
-            <div>
-                <img src={school} alt=""/>
-                <a>AVA</a>
-            </div>
-
-            <div>
-                <img src={book} alt=""/>
-                <a>Biblioteca</a>
-            </div>
-
-            <div>
-                <img src={video} alt=""/>
-                <a>EAD</a>
-            </div>
-
-            <div>
-                <img src={bank} alt=""/>
-                <a>Financeiro</a>
-            </div>
-
-            <div>
-                <img src={contract} alt=""/>
-                <a>Secretaria</a>
-            </div>
+            {
+                imagem.map((item, index) => {
+                    return (
+                        <div key={index} >
+                            <img src={item} alt="" />
+                            <a>{titulo[index]}</a>
+                        </div>
+                    )
+                })
+            }
         </Container>
     )
 }
