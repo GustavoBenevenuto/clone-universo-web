@@ -20,6 +20,7 @@ export const Header = styled.div`
             color: #2172FF;
             font-size: 30px;
             font-weight: bold;
+            text-decoration: none;
         }
 
         img{

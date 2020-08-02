@@ -12,7 +12,7 @@ const LayoutHeader: React.FC = () => {
         <Header>
             <div className='div-left'>
                 <img src={logo} alt="" />
-                <a>Universo</a>
+                <Link to='/dashboard'>Universo</Link>
             </div>
 
             <div className='div-right'>

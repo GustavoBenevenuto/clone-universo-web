@@ -24,6 +24,7 @@ export const Container = styled.div`
             font-size: 18px;
             font-weight: 500;
             padding-left: 20px;
+            text-decoration: none;
         }
 
         &:hover{

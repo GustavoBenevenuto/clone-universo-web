@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container } from './styles';
+import { Link } from 'react-router-dom';
 
 import cap from '../../img/cap.png';
 import boss from '../../img/boss.png';
@@ -13,6 +14,7 @@ const LayoutMenu: React.FC = () => {
 
     const imagem = [cap, boss, school, book, video, bank, contract];
     const titulo = ['Acadêmico', 'Agenda Gestor', 'AVA', 'Biblioteca', 'EAD', 'Financeiro', 'Secretaria'];
+    const url = ['academico', 'agenda-gestor', 'ava', 'biblioteca', 'ead', 'financeiro', 'secretaria'];
 
     return (
         <Container>
@@ -21,7 +23,7 @@ const LayoutMenu: React.FC = () => {
                     return (
                         <div key={index} >
                             <img src={item} alt="" />
-                            <a>{titulo[index]}</a>
+                            <Link to={url[index]}>{titulo[index]}</Link>
                         </div>
                     )
                 })
