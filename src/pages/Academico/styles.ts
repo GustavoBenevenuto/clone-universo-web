@@ -66,6 +66,13 @@ export const Conteudo = styled.div`
             flex-direction: column;
             margin-top: 20px;
             padding: 0px 35px;
+            align-items: center;
+
+            select {
+                margin-bottom: 20px;
+                width: 300PX;
+                color: #AAA
+            }
         }
     }
 `;
