@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiSettings, FiBell } from 'react-icons/fi'
 import { Header } from './styles';
 
@@ -16,8 +17,13 @@ const LayoutHeader: React.FC = () => {
 
             <div className='div-right'>
                 <FiBell color="#2172FF" size={20} />
-                <FiSettings className="FiSettings" color="#2172FF" size={20} />
-                <img src={perfil}/>
+                <div className="dropdown">
+                    <FiSettings className="FiSettings" color="#2172FF" size={20} />
+                    <div className="conteudo-dropdown">
+                        <Link to="/">Sair</Link>
+                    </div>
+                </div>
+                <img src={perfil} />
             </div>
         </Header>
     )
